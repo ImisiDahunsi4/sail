@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import FeaturesSection from './components/FeaturesSection';
+import TestimonialsSection from './components/TestimonialsSection';
 import PrivacySection from './components/PrivacySection';
 import FloatingElements from './components/FloatingElements';
 import WavePattern from './components/WavePattern';
@@ -24,6 +25,9 @@ function App() {
       
       {/* Features Section */}
       <FeaturesSection />
+      
+      {/* Testimonials Section */}
+      <TestimonialsSection />
       
       {/* Privacy & Trust Section */}
       <PrivacySection />
