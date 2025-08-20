@@ -39,6 +39,45 @@
   }
 }
 
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Orbital animation keyframes */
+@keyframes rotate-clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-counter {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
 /* Enhanced gradient text animation */
 .shimmer-text {
   background: linear-gradient(135deg, #1e40af 0%, #0891b2 50%, #059669 100%);
@@ -49,17 +88,47 @@
   animation: shimmer 2s ease-in-out infinite;
 }
 
+/* Feature card entrance animation */
+.feature-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Orbital animations */
+.animate-rotate-clockwise {
+  animation: rotate-clockwise 60s linear infinite;
+  will-change: transform;
+}
+
+.animate-rotate-counter {
+  animation: rotate-counter 80s linear infinite;
+  will-change: transform;
+}
+
 /* Reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
   .animate-float,
   .animate-float-delayed,
   .animate-float-slow,
   .animate-shimmer,
-  .animate-pulse {
+  .animate-pulse,
+  .animate-ping,
+  .animate-bounce,
+  .animate-spin,
+  .animate-rotate-clockwise,
+  .animate-rotate-counter,
+  .feature-card {
     animation: none;
   }
   
   .hover\:scale-102:hover {
+    transform: none;
+  }
+  
+  .hover\:-translate-y-1:hover {
+    transform: none;
+  }
+  
+  .hover\:scale-105:hover {
     transform: none;
   }
 }
@@ -68,6 +137,13 @@
 .focus\:ring-4:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+/* Enhanced focus indicators */
+*:focus-visible {
+  outline: 2px solid #0891b2;
+  outline-offset: 2px;
+  border-radius: inherit;
 }
 
 /* Smooth scrolling */
@@ -91,4 +167,18 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
+}
+
+/* Improve text rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Performance optimizations for orbital animations */
+.animate-rotate-clockwise,
+.animate-rotate-counter {
+  transform-origin: center;
+  backface-visibility: hidden;
 }
