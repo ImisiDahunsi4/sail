@@ -1,6 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Header: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleSignInClick = () => {
+    navigate('/auth');
+  };
+
   return (
     <header className="relative z-10 px-6 py-6">
       <nav className="max-w-7xl mx-auto flex items-center justify-between">
@@ -22,7 +29,10 @@ const Header: React.FC = () => {
           <a href="#about" className="text-charcoal-600 hover:text-ocean-700 transition-colors">
             About
           </a>
-          <button className="bg-ocean-950 text-white px-4 py-2 rounded-lg hover:bg-ocean-800 transition-colors">
+          <button 
+            onClick={handleSignInClick}
+            className="bg-ocean-950 text-white px-4 py-2 rounded-lg hover:bg-ocean-800 transition-colors"
+          >
             Sign In
           </button>
         </div>
