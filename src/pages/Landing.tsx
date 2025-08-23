@@ -1,0 +1,38 @@
+import React from 'react';
+import Header from '../components/Header';
+import HeroSection from '../components/HeroSection';
+import FeaturesSection from '../components/FeaturesSection';
+import TestimonialsSection from '../components/TestimonialsSection';
+import PrivacySection from '../components/PrivacySection';
+import FloatingElements from '../components/FloatingElements';
+import WavePattern from '../components/WavePattern';
+
+const Landing = () => {
+  return (
+    <div className="min-h-screen relative">
+      {/* Hero Section with Background */}
+      <div className="bg-gradient-hero relative overflow-hidden">
+        {/* Background Pattern */}
+        <WavePattern />
+
+        {/* Floating Elements */}
+        <FloatingElements />
+
+        {/* Hero Content */}
+        <Header />
+        <HeroSection />
+      </div>
+
+      {/* Features Section */}
+      <FeaturesSection />
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
+
+      {/* Privacy & Trust Section */}
+      <PrivacySection />
+    </div>
+  );
+}
+
+export default Landing;
