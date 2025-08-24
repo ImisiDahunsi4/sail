@@ -35,19 +35,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -217,15 +210,15 @@
   .feature-card {
     animation: none;
   }
-  
+
   .hover\:scale-102:hover {
     transform: none;
   }
-  
+
   .hover\:-translate-y-1:hover {
     transform: none;
   }
-  
+
   .hover\:scale-105:hover {
     transform: none;
   }
@@ -349,7 +342,7 @@ body {
   .testimonials-scroll {
     animation: scroll-left-mobile 35s linear infinite;
   }
-  
+
   .testimonial-card {
     width: 300px;
   }
@@ -360,17 +353,17 @@ body {
   .testimonials-scroll {
     animation: none;
   }
-  
+
   .testimonials-container {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scrollbar-width: thin;
   }
-  
+
   .testimonial-card {
     scroll-snap-align: start;
   }
-  
+
   .testimonial-card:hover {
     transform: none;
   }
